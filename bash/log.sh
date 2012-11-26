@@ -1,0 +1,2 @@
+pwd >> log.txt
+

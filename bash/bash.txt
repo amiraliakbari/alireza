@@ -1,0 +1,13 @@
+./max2.out < 1.in > 1.out && ./max2.out < 1.in >> 1.out && ./max2.out < 1.out
+
+1.in:
+2
+3 2
+
+1.out:
+3 2
+3 2
+
+
+echo "3 4 5 6" > 1.in && ./max2.out < 1.in
+echo "x" | ./max2.out | ./max3.out > t && ./max4.out
