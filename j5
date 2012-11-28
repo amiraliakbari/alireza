@@ -1,0 +1,6 @@
+git init
+git add <filename>
+git commit -am 'message'
+git rm <filename>
+git status
+
