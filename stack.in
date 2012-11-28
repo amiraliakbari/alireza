@@ -1,0 +1,9 @@
+push 3
+push 4
+push 5
+pop
+pop
+push 2
+pop
+pop
+exit
