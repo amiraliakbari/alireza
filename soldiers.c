@@ -9,7 +9,7 @@ bool orbit(char line[])
 	int n = strlen(line);
 	bool r = false;
 	int i;	
-	for (i = 0; i < n; i += 2)
+	for (i = 0; i < n; i++)
 	{
 		if (i == n-1)
 			break;
@@ -17,6 +17,8 @@ bool orbit(char line[])
 		{
 			line[i] = '<';
 			line[i + 1] = '>';
+			r = true;
+			i++;
 		}
 	}
 	return r;
@@ -37,14 +39,16 @@ int main()
 */
 
 	//read
+	int i;
 	char line[MAX_N];	
 	scanf("%s", &line);
 
 	//solve
-	while (orbit(line))
-	{
-		printf("%s\n", line);
-	}
+	do {
+		for (i = 0; i < strlen(line); i++)
+			printf("%c ", line[i]);
+		printf("\n");
+	} while (orbit(line));
 	printf("Finish\n");
 	return 0;
 }
